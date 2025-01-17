@@ -11,3 +11,13 @@ if (Nilai >= 90) {
 } else if(Nilai >= 50) {
   console.log('D')
 }
+
+
+const Ganjilgenap = prompt('isikan angaka');
+// prompt mengambil inputan
+
+if (Ganjilgenap % 2 == 0) {
+  console.log('number your input is genap');
+} else {
+  console.log('number your input is ganjil');
+}
