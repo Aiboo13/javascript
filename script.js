@@ -6,6 +6,7 @@ const Namabelakang =" sahiddin";
 const Namalengkap = Namadepan + Namabelakang;
 
 // alert(Namalengkap);
+ppp
 
 let angka = Math.random();
 console.log(angka);
