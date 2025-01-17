@@ -1,19 +1,13 @@
-console.log("hello word");
+console.log('haiii');
 
-const Namadepan ="minas";
-const Namabelakang =" sahiddin";
+const Nilai = '60';
 
-const Namalengkap = Namadepan + Namabelakang;
-
-// alert(Namalengkap);
-ppp
-
-let angka = Math.random();
-console.log(angka);
-
-if(angka <= 0.5){
-  console.log("angka lebih kecil dari 0.5");
-}
-if(angka >= 0.5){
-  console.log("angka lebih besar dari 0.5");
+if (Nilai >= 90) {
+  console.log('A');
+} else if(Nilai >= 70) {
+  console.log('B')
+} else if(Nilai >= 65) {
+  console.log('C')
+} else if(Nilai >= 50) {
+  console.log('D')
 }
