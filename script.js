@@ -61,6 +61,14 @@ console.log(Musik)
 Musik.pop;
 console.log(Musik);
 
+const angka=[1,3,4,5,2,11,64,31241,112,243];
+
+console.log(angka);
+
+angka.sort();
+
+console.log(angka)
+// ternyata java scrip di eksekusi perbaris
 
 
 
