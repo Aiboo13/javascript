@@ -128,5 +128,9 @@ console.log(orang.alamat.alamat1);
 // cara mengkases object didalam object
 
 
+for (let i = 0; i <= 5; i++) {
+  console.log(i, "i am here");  
+}
+
 
 
