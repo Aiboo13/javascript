@@ -74,4 +74,28 @@ console.log(angka.includes(9));
 // ternyata java scrip di eksekusi perbaris
 
 
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals);
+console.log(animals.slice(2));
+console.log(' Expected output: Array ["camel", "duck", "elephant"]');
+console.log(animals.slice(2, 4));
+// Expected output: Array ["camel", "duck"]
+console.log('Expected output: Array ["camel", "duck"]');
+console.log(animals.slice(1, 5));
+console.log('Expected output: Array ["bison", "camel", "duck", "elephant"]');
+// Expected output: Array ["bison", "camel", "duck", "elephant"]
+
+console.log(animals.slice(-2));
+console.log('Expected output: Array ["duck", "elephant"]');
+// Expected output: Array ["duck", "elephant"]
+
+console.log(animals.slice(2, -1));
+console.log('Expected output: Array ["camel", "duck"]');
+// Expected output: Array ["camel", "duck"]
+
+console.log(animals.slice());
+console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]');
+// Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
+
+
 
