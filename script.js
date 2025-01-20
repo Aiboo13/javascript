@@ -68,6 +68,9 @@ console.log(angka);
 angka.sort();
 
 console.log(angka)
+
+console.log(angka.includes(9));
+// include untuk mencari nilai
 // ternyata java scrip di eksekusi perbaris
 
 
