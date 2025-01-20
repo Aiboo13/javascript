@@ -124,3 +124,9 @@ const orang ={
 }
 
 console.log(orang);
+console.log(orang.alamat.alamat1);
+// cara mengkases object didalam object
+
+
+
+
