@@ -110,3 +110,17 @@ console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"
 
 
 
+// object
+// bisa mengunkan let atau const 
+
+const orang ={
+  nama : 'cahyahdi',
+  umur : 30,
+  lahir : 'Nganjuk,13-9-1973',
+  alamat : {
+    alamat1 : 'balongan',
+    alamat2 : 'nganjuk'
+  }
+}
+
+console.log(orang);
