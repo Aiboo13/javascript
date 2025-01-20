@@ -73,26 +73,37 @@ console.log(angka.includes(9));
 // include untuk mencari nilai
 // ternyata java scrip di eksekusi perbaris
 
-
+console.log('ARRAY AWAL');
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
 console.log(animals);
+
+console.log('console.log(animals.slice(2));')
 console.log(animals.slice(2));
 console.log(' Expected output: Array ["camel", "duck", "elephant"]');
+
+console.log('console.log(animals.slice(2, 4));');
 console.log(animals.slice(2, 4));
+console.log('Expected output: Array ["camel", "duck"]');
 // Expected output: Array ["camel", "duck"]
 console.log('Expected output: Array ["camel", "duck"]');
+
+console.log('console.log(animals.slice(1, 5));');
 console.log(animals.slice(1, 5));
 console.log('Expected output: Array ["bison", "camel", "duck", "elephant"]');
 // Expected output: Array ["bison", "camel", "duck", "elephant"]
 
+
+console.log('console.log(animals.slice(-2));');
 console.log(animals.slice(-2));
 console.log('Expected output: Array ["duck", "elephant"]');
 // Expected output: Array ["duck", "elephant"]
 
+console.log('console.log(animals.slice(2, -1));');
 console.log(animals.slice(2, -1));
 console.log('Expected output: Array ["camel", "duck"]');
 // Expected output: Array ["camel", "duck"]
 
+console.log('console.log(animals.slice());');
 console.log(animals.slice());
 console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]');
 // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
