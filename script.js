@@ -24,24 +24,43 @@
 
 // 
 
-console.log('pick you eat with code');
-console.log('1 = mie');
-console.log('2 = ayam');
-console.log('3 = bakso');
+// console.log('pick you eat with code');
+// console.log('1 = mie');
+// console.log('2 = ayam');
+// console.log('3 = bakso');
 
-const masukanKode = prompt('masukan code');
+// const masukanKode = prompt('masukan code');
 
-switch(masukanKode){
-  case '1':
-  console.log('anda memilih mie');
-  break;
-  case '2':
-  console.log('anda memilih ayam');
-  break;
-  case '3':
-  console.log('anda memilih bakso');
-  break;
-  default:
-    console.log('code yang anda masukan tidak ada');
-}
+// switch(masukanKode){
+//   case '1':
+//   console.log('anda memilih mie');
+//   alert('siip');
+//   break;
+//   case '2':
+//   console.log('anda memilih ayam');
+//   break;
+//   case '3':
+//   console.log('anda memilih bakso');
+//   break;
+//   default:
+//     console.log('code yang anda masukan tidak ada');
+// }
+
+// console.log('allhadulillah');
+
+const Huruf ='jiiiiiiiiiiiiiiiiiiiiiiiiiiiika';
+
+console.log(Huruf.length)
+
+// alert("blok");
+
+let Musik=[1,2,3,4,5,6];
+
+console.log(Musik)
+
+Musik.pop;
+console.log(Musik);
+
+
+
 
