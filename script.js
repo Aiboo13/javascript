@@ -48,9 +48,9 @@
 
 // console.log('allhadulillah');
 
-const Huruf ='jiiiiiiiiiiiiiiiiiiiiiiiiiiiika';
+// const Huruf ='jiiiiiiiiiiiiiiiiiiiiiiiiiiiika';
 
-console.log(Huruf.length)
+// console.log(Huruf.length)
 
 // alert("blok");
 
@@ -128,17 +128,59 @@ console.log(orang.alamat.alamat1);
 // cara mengkases object didalam object
 
 
-for (let i = 0; i <= 5; i++) {
-  console.log(i, "i am here");  
-}
-for (let i = 1; i <= 25; i *=5) {
-  console.log(i, "i am here");  
+// for (let i = 0; i <= 5; i++) {
+//   console.log(i, "i am here");  
+// }
+// for (let i = 1; i <= 25; i *=5) {
+//   console.log(i, "i am here");  
+// }
+
+// const three = ["banana", 'water melon', 'cerry', 'apple'];
+
+// for (let i = 0; i < three.length; i++) {
+//   console.log(i, three[i]); 
+// }
+
+// console.log("nested loop")
+
+// const pilihan = 'abcd';
+// // harus menguunkana tanda petik 2
+
+// console.log(pilihan.length);
+
+// for(let i = 1; i < 10; i++){
+//   console.log(`${i}, soal nomor ${i}:`);
+//   for(let j = 0; j < pilihan.length; j++){
+//     console.log(`' ${pilihan[j]}. pilihan Jawaban`)
+//   }
+// }
+
+const bangku =[
+  ['andi', 'elsa', 'dimas', 'midah'],
+  ['fajar', 'kiki', 'andre', 'zagi'],
+  ['sahid', 'minas', 'zainal', 'dapa']
+];
+
+console.log(bangku.length)
+
+for(let i = 0; i < bangku.length; i++){
+  const row = bangku[i]
+  console.log(` baris ${i + 1}`);
+  for(let j = 0; j <bangku.length; j++){
+    console.log(`${row[j]}`)
+  }
 }
 
-const three = ["banana", 'water melon', 'cerry', 'apple'];
 
-for (let i = 0; i < three.length; i++) {
-  console.log(i, three[i]); 
+console.log("its time is while");
+
+
+const password ="sahid";
+
+let quest = prompt("your password");
+while(quest !== password){
+  quest = prompt("enter your password again")
+  // perlu di ingat bagain sini 
 }
 
-console.log("nested loop")
+console.log("your password is corrent")
