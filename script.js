@@ -131,6 +131,14 @@ console.log(orang.alamat.alamat1);
 for (let i = 0; i <= 5; i++) {
   console.log(i, "i am here");  
 }
+for (let i = 1; i <= 25; i *=5) {
+  console.log(i, "i am here");  
+}
 
+const three = ["banana", 'water melon', 'cerry', 'apple'];
 
+for (let i = 0; i < three.length; i++) {
+  console.log(i, three[i]); 
+}
 
+console.log("nested loop")
