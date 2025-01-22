@@ -188,10 +188,57 @@ const password ="sahid";
 // console.log("your password is corrent");
 
 
-console.log("BREAK");
-let input = prompt("masukan bebas");
-while (true) {
-  input = prompt("masukan lagi");
-  if(input.toLowerCase() === 'stop') break;
-  // sebuah fungsi harus diikuti tanda kurung buka ()
+// console.log("BREAK");
+// // let input = prompt("masukan bebas");
+// while (true) {
+//   input = prompt("masukan lagi");
+//   if(input.toLowerCase() === 'stop') break;
+//   // sebuah fungsi harus diikuti tanda kurung buka ()
+// }
+
+alert("sekarang anda memasuki game");
+let maximum = parseInt(prompt("masukan angka batas"));
+
+while(!maximum){
+  maximum = parseInt(prompt("masukan angka batas"));
+}
+
+const targetNum = Math.floor(Math.random() * maximum) + 1; 
+console.log(targetNum);
+
+let guest = parseInt(prompt('masukan tebakan mu'));
+let tebakan = 1;
+
+while(parseInt(guest) !== targetNum){
+  tebakan++;
+  if(guest > targetNum){
+    guest = parseInt(prompt("terlalu tinggi tebak lagi..!!"));
+  }else{
+    guest = parseInt(prompt('terlalu rendah tebak lagi'));
+  }
+}
+alert(`selamat.!! tebakan anda benar dengan ${tebakan} kali percobaan`);
+
+
+let country = ['indonesia', 'singapure', 'malasia'];
+
+for(let i of country){
+  // let i sudah include si variabel country 
+  console.log(`${i}`);
+}
+
+let score={
+  dina :90,
+  dino :90,
+  dinu :90,
+  dini :90,
+  dinl :90,
+  dena :90,
+  duna :90,
+  dona :90,
+  dina :90,
+}
+
+for(let student in score){
+  console.log(`nama ${student} memiliki nilai ${score[student]}`);
 }
