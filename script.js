@@ -168,6 +168,7 @@ for(let i = 0; i < bangku.length; i++){
   console.log(` baris ${i + 1}`);
   for(let j = 0; j <bangku.length; j++){
     console.log(`${row[j]}`)
+    // lambang dolar untuk memeprmudah pengilan stirng maupun sebuah variabel
   }
 }
 
@@ -177,10 +178,20 @@ console.log("its time is while");
 
 const password ="sahid";
 
-let quest = prompt("your password");
-while(quest !== password){
-  quest = prompt("enter your password again")
+// let quest = prompt("your password");
+// while(quest !== password){
+//   alert("password salah");
+//   quest = prompt("enter your password again");
   // perlu di ingat bagain sini 
-}
+// }
+// alert("succes");
+// console.log("your password is corrent");
 
-console.log("your password is corrent")
+
+console.log("BREAK");
+let input = prompt("masukan bebas");
+while (true) {
+  input = prompt("masukan lagi");
+  if(input.toLowerCase() === 'stop') break;
+  // sebuah fungsi harus diikuti tanda kurung buka ()
+}
