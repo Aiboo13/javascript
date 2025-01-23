@@ -281,3 +281,12 @@ function Num(a = 0,b = 0){
   console.log(total);
 }
 Num(9,2);
+
+// return in function
+
+function penjumlahan (a,b){
+  if(typeof a !== 'number' || typeof b !== 'number'){
+    return `harus angka`;
+  }
+  return a + b;
+}
