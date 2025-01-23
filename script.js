@@ -268,3 +268,16 @@ tesTagnggal();
 // }else{
 //   alert("succes")
 // }
+
+function note(subject){
+  console.log(`what do you think ${subject}`);
+}
+
+note(`cat`);
+
+// multiple parameter
+function Num(a = 0,b = 0){
+  let total = a + b;
+  console.log(total);
+}
+Num(9,2);
