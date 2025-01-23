@@ -248,6 +248,23 @@ function lemprdadu(){
   // jangan lupa ()
   console.log(Math.floor(Math.random() * 5) + 1);
   // di dala Math.random() di dalam kurung tidak boleh ada isi nya 
-  
 }
 
+function tesTagnggal(){
+  console.log('aku lahir di tanggal',Math.ceil(Math.random() * 30) + 1);
+}
+
+tesTagnggal();
+// cara tersebut unutk mengamangil function
+
+// function isi(){
+//   prompt("masukan id");
+// }
+
+// // isi();
+// let Isi = prompt("input your unsername")
+// if(Isi == 'admin'){
+//   isi();
+// }else{
+//   alert("succes")
+// }
