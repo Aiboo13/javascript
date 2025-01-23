@@ -290,3 +290,16 @@ function penjumlahan (a,b){
   }
   return a + b;
 }
+
+// scope
+
+let hewan = 'kucing';
+
+function scope(){
+  let hewan = 'anjing';
+  console.log(hewan);
+}
+
+
+console.log(hewan);
+scope();
