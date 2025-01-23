@@ -22,7 +22,7 @@
 //   console.log('number your input is ganjil');
 // }
 
-// 
+
 
 // console.log('pick you eat with code');
 // console.log('1 = mie');
@@ -54,58 +54,58 @@
 
 // alert("blok");
 
-let Musik=[1,2,3,4,5,6];
+// let Musik=[1,2,3,4,5,6];
 
-console.log(Musik)
+// console.log(Musik)
 
-Musik.pop;
-console.log(Musik);
+// Musik.pop;
+// console.log(Musik);
 
-const angka=[1,3,4,5,2,11,64,31241,112,243];
+// const angka=[1,3,4,5,2,11,64,31241,112,243];
 
-console.log(angka);
+// console.log(angka);
 
-angka.sort();
+// angka.sort();
 
-console.log(angka)
+// console.log(angka)
 
-console.log(angka.includes(9));
+// console.log(angka.includes(9));
 // include untuk mencari nilai
 // ternyata java scrip di eksekusi perbaris
 
-console.log('ARRAY AWAL');
-const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
-console.log(animals);
+// console.log('ARRAY AWAL');
+// const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+// console.log(animals);
 
-console.log('console.log(animals.slice(2));')
-console.log(animals.slice(2));
-console.log(' Expected output: Array ["camel", "duck", "elephant"]');
+// console.log('console.log(animals.slice(2));')
+// console.log(animals.slice(2));
+// console.log(' Expected output: Array ["camel", "duck", "elephant"]');
 
-console.log('console.log(animals.slice(2, 4));');
-console.log(animals.slice(2, 4));
-console.log('Expected output: Array ["camel", "duck"]');
+// console.log('console.log(animals.slice(2, 4));');
+// console.log(animals.slice(2, 4));
+// console.log('Expected output: Array ["camel", "duck"]');
 // Expected output: Array ["camel", "duck"]
-console.log('Expected output: Array ["camel", "duck"]');
+// console.log('Expected output: Array ["camel", "duck"]');
 
-console.log('console.log(animals.slice(1, 5));');
-console.log(animals.slice(1, 5));
-console.log('Expected output: Array ["bison", "camel", "duck", "elephant"]');
+// console.log('console.log(animals.slice(1, 5));');
+// console.log(animals.slice(1, 5));
+// console.log('Expected output: Array ["bison", "camel", "duck", "elephant"]');
 // Expected output: Array ["bison", "camel", "duck", "elephant"]
 
 
-console.log('console.log(animals.slice(-2));');
-console.log(animals.slice(-2));
-console.log('Expected output: Array ["duck", "elephant"]');
+// console.log('console.log(animals.slice(-2));');
+// console.log(animals.slice(-2));
+// console.log('Expected output: Array ["duck", "elephant"]');
 // Expected output: Array ["duck", "elephant"]
 
-console.log('console.log(animals.slice(2, -1));');
-console.log(animals.slice(2, -1));
-console.log('Expected output: Array ["camel", "duck"]');
+// console.log('console.log(animals.slice(2, -1));');
+// console.log(animals.slice(2, -1));
+// console.log('Expected output: Array ["camel", "duck"]');
 // Expected output: Array ["camel", "duck"]
 
-console.log('console.log(animals.slice());');
-console.log(animals.slice());
-console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]');
+// console.log('console.log(animals.slice());');
+// console.log(animals.slice());
+// console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]');
 // Expected output: Array ["ant", "bison", "camel", "duck", "elephant"]
 
 
@@ -113,18 +113,18 @@ console.log('Expected output: Array ["ant", "bison", "camel", "duck", "elephant"
 // object
 // bisa mengunkan let atau const 
 
-const orang ={
-  nama : 'cahyahdi',
-  umur : 30,
-  lahir : 'Nganjuk,13-9-1973',
-  alamat : {
-    alamat1 : 'balongan',
-    alamat2 : 'nganjuk'
-  }
-}
+// const orang ={
+//   nama : 'cahyahdi',
+//   umur : 30,
+//   lahir : 'Nganjuk,13-9-1973',
+//   alamat : {
+//     alamat1 : 'balongan',
+//     alamat2 : 'nganjuk'
+//   }
+// }
 
-console.log(orang);
-console.log(orang.alamat.alamat1);
+// console.log(orang);
+// console.log(orang.alamat.alamat1);
 // cara mengkases object didalam object
 
 
@@ -155,34 +155,34 @@ console.log(orang.alamat.alamat1);
 //   }
 // }
 
-const bangku =[
-  ['andi', 'elsa', 'dimas', 'midah'],
-  ['fajar', 'kiki', 'andre', 'zagi'],
-  ['sahid', 'minas', 'zainal', 'dapa']
-];
+// const bangku =[
+//   ['andi', 'elsa', 'dimas', 'midah'],
+//   ['fajar', 'kiki', 'andre', 'zagi'],
+//   ['sahid', 'minas', 'zainal', 'dapa']
+// ];
 
-console.log(bangku.length)
+// console.log(bangku.length)
 
-for(let i = 0; i < bangku.length; i++){
-  const row = bangku[i]
-  console.log(` baris ${i + 1}`);
-  for(let j = 0; j <bangku.length; j++){
-    console.log(`${row[j]}`)
-    // lambang dolar untuk memeprmudah pengilan stirng maupun sebuah variabel
-  }
-}
-
-
-console.log("its time is while");
+// for(let i = 0; i < bangku.length; i++){
+//   const row = bangku[i]
+//   console.log(` baris ${i + 1}`);
+//   for(let j = 0; j <bangku.length; j++){
+//     console.log(`${row[j]}`)
+//     lambang dolar untuk memeprmudah pengilan stirng maupun sebuah variabel
+//   }
+// }
 
 
-const password ="sahid";
+// console.log("its time is while");
+
+
+// const password ="sahid";
 
 // let quest = prompt("your password");
 // while(quest !== password){
 //   alert("password salah");
 //   quest = prompt("enter your password again");
-  // perlu di ingat bagain sini 
+//   perlu di ingat bagain sini 
 // }
 // alert("succes");
 // console.log("your password is corrent");
@@ -196,49 +196,58 @@ const password ="sahid";
 //   // sebuah fungsi harus diikuti tanda kurung buka ()
 // }
 
-alert("sekarang anda memasuki game");
-let maximum = parseInt(prompt("masukan angka batas"));
+// alert("sekarang anda memasuki game");
+// let maximum = parseInt(prompt("masukan angka batas"));
 
-while(!maximum){
-  maximum = parseInt(prompt("masukan angka batas"));
+// while(!maximum){
+//   maximum = parseInt(prompt("masukan angka batas"));
+// }
+
+// const targetNum = Math.floor(Math.random() * maximum) + 1; 
+// console.log(targetNum);
+
+// let guest = parseInt(prompt('masukan tebakan mu'));
+// let tebakan = 1;
+
+// while(parseInt(guest) !== targetNum){
+//   tebakan++;
+//   if(guest > targetNum){
+//     guest = parseInt(prompt("terlalu tinggi tebak lagi..!!"));
+//   }else{
+//     guest = parseInt(prompt('terlalu rendah tebak lagi'));
+//   }
+// }
+// alert(`selamat.!! tebakan anda benar dengan ${tebakan} kali percobaan`);
+
+
+// let country = ['indonesia', 'singapure', 'malasia'];
+
+// for(let i of country){
+//   let i sudah include si variabel country 
+//   console.log(`${i}`);
+// }
+
+// let score={
+//   dina :90,
+//   dino :90,
+//   dinu :90,
+//   dini :90,
+//   dinl :90,
+//   dena :90,
+//   duna :90,
+//   dona :90,
+//   dina :90,
+// }
+
+// for(let student in score){
+//   console.log(`nama ${student} memiliki nilai ${score[student]}`);
+// }
+
+
+function lemprdadu(){
+  // jangan lupa ()
+  console.log(Math.floor(Math.random() * 5) + 1);
+  // di dala Math.random() di dalam kurung tidak boleh ada isi nya 
+  
 }
 
-const targetNum = Math.floor(Math.random() * maximum) + 1; 
-console.log(targetNum);
-
-let guest = parseInt(prompt('masukan tebakan mu'));
-let tebakan = 1;
-
-while(parseInt(guest) !== targetNum){
-  tebakan++;
-  if(guest > targetNum){
-    guest = parseInt(prompt("terlalu tinggi tebak lagi..!!"));
-  }else{
-    guest = parseInt(prompt('terlalu rendah tebak lagi'));
-  }
-}
-alert(`selamat.!! tebakan anda benar dengan ${tebakan} kali percobaan`);
-
-
-let country = ['indonesia', 'singapure', 'malasia'];
-
-for(let i of country){
-  // let i sudah include si variabel country 
-  console.log(`${i}`);
-}
-
-let score={
-  dina :90,
-  dino :90,
-  dinu :90,
-  dini :90,
-  dinl :90,
-  dena :90,
-  duna :90,
-  dona :90,
-  dina :90,
-}
-
-for(let student in score){
-  console.log(`nama ${student} memiliki nilai ${score[student]}`);
-}
