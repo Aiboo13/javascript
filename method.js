@@ -2,15 +2,15 @@ console.log("this part for 'foreach'");
 
 const number =[1,2,3,4,5,6,7,8,9,10];
 
-for (let i = 0; i <= number.length; i++) {
-  console.log(number[i]);
-}
+// for (let i = 0; i <= number.length; i++) {
+//   console.log(number[i]);
+// }
 
-number.forEach(function(angka){
-  if (angka % 2 == 0) {
-    console.log(angka);
-  }
-})
+// number.forEach(function(angka){
+//   if (angka % 2 == 0) {
+//     console.log(angka);
+//   }
+// })
 
 
 let films =[
@@ -44,6 +44,23 @@ let films =[
   }
 ];
 
-films.forEach(function(film){
-  console.log(`judul film: ${film.title}===== with rate ${film.rate}`)
+// films.forEach(function(film){
+//   console.log(`judul film: ${film.title}===== with rate ${film.rate}`)
+// })
+
+
+console.log("this part for 'map'")
+
+let doubleNumber = number.map(function(num){
+  if(num % 2 !== 0){
+    return num * 10;
+  }
 })
+
+console.log(doubleNumber)
+
+let Upfilm = films.map(function(upper){
+  return upper.title.toUpperCase()
+});
+
+console.log(Upfilm)
