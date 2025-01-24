@@ -378,3 +378,4 @@ let uji = 'awkokwo coba aja'
 console.log(uji);
 
 say(uji);
+say(uji);
