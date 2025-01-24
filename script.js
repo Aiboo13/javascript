@@ -347,22 +347,18 @@
 //   console.log(lemparDadu())
 // }
 
-console.log("return function");
+// 
 
-function returnFunction(){
-  const rand = Math.floor(Math.random() * 11) + 5;
+console.log("this is part 'this'");
 
-    if(rand > 11){
-      return function(){
-        console.log("nilai random lebih besar dari 11")
-      }
-  }else{
-    return function(){
-      console.log("nilai random lebih kecil dari 11")
-    }
+let Myself= {
+  nama : 'minassahiddin',
+  umur : 19,
+  alamat : 'baleturi',
+  kenalan : function(){
+    return `halo nama saya ${this.nama} umur saya ${this.umur} alamat desa saya ${this.alamat}`
+    // jadi this itu untuk memangil methon dalam satu scope
   }
 }
-let result = returnFunction();
-result();
 
-console.log(Math.floor(Math.random() * 8) + 5)
+console.log(Myself.kenalan())
