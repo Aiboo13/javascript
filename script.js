@@ -349,16 +349,16 @@
 
 // 
 
-console.log("this is part 'this'");
+// console.log("this is part 'this'");
 
-let Myself= {
-  nama : 'minassahiddin',
-  umur : 19,
-  alamat : 'baleturi',
-  kenalan : function(){
-    return `halo nama saya ${this.nama} umur saya ${this.umur} alamat desa saya ${this.alamat}`
-    // jadi this itu untuk memangil methon dalam satu scope
-  }
-}
+// let Myself= {
+//   nama : 'minassahiddin',
+//   umur : 19,
+//   alamat : 'baleturi',
+//   kenalan : function(){
+//     return `halo nama saya ${this.nama} umur saya ${this.umur} alamat desa saya ${this.alamat}`
+//     // jadi this itu untuk memangil methon dalam satu scope
+//   }
+// }
 
-console.log(Myself.kenalan())
+// console.log(Myself.kenalan())
