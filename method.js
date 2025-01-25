@@ -64,15 +64,11 @@ let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
   console.log(`${judul.title} dengan rate ${judul.rate}`)
 } )
 
-
-
 // console.log("time out and time interval");
 
 // setTimeout(() =>{
 //   console.log("jika pesan ini muncul maka kode di esekusi setelah 3 detik")
 // }, 3000);
-
-
 
 function loop(){
   for(let i= 0; i <= 10000; i++){
@@ -84,4 +80,14 @@ function loop(){
 
 // loop();
 
+console.log("some and every");
 
+const Grade = [89,88,79,79,89];
+const Some = Grade.some((nilai) => nilai >= 90 );
+// jadi some itu harus semuanya memenuhi syarat supaya true
+console.log("==================")
+console.log(`${Some}`)
+console.log("==================")
+const every = Grade.every((nilai) => nilai >= 70 );
+// beda dari some, every lebih fleksibel jika salah satu dari meraka tidak memenuhi syarat maka output nya tetep true
+console.log(`${every}`)
