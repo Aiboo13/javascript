@@ -39,7 +39,7 @@ let films =[
   },
   {
     title : 'kimetsu no yoiba',
-    rate : 94,
+    rate : 91,
   },
   {
     title : 'transformers',
@@ -47,22 +47,32 @@ let films =[
   }
 ];
 
-console.log("this part for 'map'")
+const pembanding= films.reduce((pembanding1, pembanding2) =>{
+  if(pembanding1.rate < pembanding2.rate){
+    // jika tanda ">" mengarah ke pembanding1 dan returnya pembanding 1 maka yang di cari adalh yang terbear
+    return pembanding1
+  }
+  return pembanding2
+});
 
-let mapping = films.map((upper) => {
-  return upper.title.toUpperCase();
-})
+console.log(pembanding)
 
-let ratting = films.filter((n) => {
-  return n.rate >= 90;
-})
+// console.log("this part for 'map'")
 
-console.log("combination filter and map");
+// let mapping = films.map((upper) => {
+//   return upper.title.toUpperCase();
+// })
 
-let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
-  // function di dalam situ tak perlu "=>" jika tidka mau menuliskan function maka di ganti dnegan =>
-  console.log(`${judul.title} dengan rate ${judul.rate}`)
-} )
+// let ratting = films.filter((n) => {
+//   return n.rate >= 90;
+// })
+
+// console.log("combination filter and map");
+
+// let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
+//   // function di dalam situ tak perlu "=>" jika tidka mau menuliskan function maka di ganti dnegan =>
+//   console.log(`${judul.title} dengan rate ${judul.rate}`)
+// } )
 
 // console.log("time out and time interval");
 
@@ -70,24 +80,39 @@ let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
 //   console.log("jika pesan ini muncul maka kode di esekusi setelah 3 detik")
 // }, 3000);
 
-function loop(){
-  for(let i= 0; i <= 10000; i++){
-    setTimeout(() => {
-      console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
-    }, i * 500);
-  }
-}
+// function loop(){
+//   for(let i= 0; i <= 10000; i++){
+//     setTimeout(() => {
+//       console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
+//     }, i * 500);
+//   }
+// }
 
 // loop();
 
-console.log("some and every");
+// console.log("some and every");
 
-const Grade = [89,88,79,79,89];
-const Some = Grade.some((nilai) => nilai >= 90 );
-// jadi some itu harus semuanya memenuhi syarat supaya true
-console.log("==================")
-console.log(`${Some}`)
-console.log("==================")
-const every = Grade.every((nilai) => nilai >= 70 );
-// beda dari some, every lebih fleksibel jika salah satu dari meraka tidak memenuhi syarat maka output nya tetep true
-console.log(`${every}`)
+const Grade = [89,88,79,79,89,93,97,98,96];
+
+const sum = Grade.reduce((object1, object2)=>{
+  return object1 + object2;
+})
+console.log(sum)
+console.log("================")
+let summ = 0;
+for (const element of Grade) {
+  summ += element;
+}
+
+console.log(summ);
+
+// const Some = Grade.some((nilai) => nilai >= 90 );
+// // beda dari some, every lebih fleksibel jika salah satu dari meraka tidak memenuhi syarat maka output nya tetep true
+
+// console.log("==================")
+// console.log(`ini bentuk dari method some "${Some}"`)
+// console.log("==================")
+// const every = Grade.every((nilai) => nilai >= 90 );
+// // jadi some itu harus semuanya memenuhi syarat supaya true
+
+// console.log(`ini bentuk dari method every "${every}"`)
