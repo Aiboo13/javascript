@@ -59,7 +59,8 @@ let ratting = films.filter((n) => {
 
 console.log("combination filter and map");
 
-let Filmbagus = films.filter((film) => film.rate >= 80 ).map((judul) =>{
+let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
+  // function di dalam situ tak perlu "=>" jika tidka mau menuliskan function maka di ganti dnegan =>
   console.log(`${judul.title} dengan rate ${judul.rate}`)
 } )
 
