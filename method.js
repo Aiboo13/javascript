@@ -134,14 +134,28 @@ let films =[
 // console.log(Math.min(...angka1));
 // // pengunaan "..." untuk sebuah array
 
-console.log("pengabungan array")
+// 
 
-const number =[1,2,3,4,5,6,7,8,9];
+console.log("pengabungan buat obaject dengan object");
 
-console.log(number);
-const nama =["sahid", "lia", "minas"];
-console.log(nama);
+const member ={
+  name : 'irawan',
+  id : 7216378623681,
+  password : "irawan 123#"
+}
 
-const merge =[...number, ...nama];
+console.log(member)
 
-console.log(merge);
+const plusInfo={
+  age : 19,
+  addres : "malang"
+};
+
+
+console.log(plusInfo);
+
+const compliteInfo ={...member, ...plusInfo};
+
+console.log(compliteInfo)
+
+// jadi object itu menggunakan kurung kurawal 
