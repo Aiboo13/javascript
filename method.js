@@ -119,17 +119,29 @@ let films =[
 
 // 
 
-console.log("spereed opertaor pada function");
-console.log("mengubah array dan objeck menjadi deret parameter");
+// console.log("spereed opertaor pada function");
+// console.log("mengubah array dan objeck menjadi deret parameter");
 
 
-const angka = (1,2,4,5,3,7,8,9);
-const angka1 = [1,2,4,5,3,7,8,9];
+// const angka = (1,2,4,5,3,7,8,9);
+// const angka1 = [1,2,4,5,3,7,8,9];
 
-console.log("'math.max(anga)' function max");
+// console.log("'math.max(anga)' function max");
 
-console.log(Math.max(angka));
+// console.log(Math.max(angka));
 
-console.log("'math.min(anga)' function min");
-console.log(Math.min(...angka1));
-// pengunaan "..." untuk sebuah array
+// console.log("'math.min(anga)' function min");
+// console.log(Math.min(...angka1));
+// // pengunaan "..." untuk sebuah array
+
+console.log("pengabungan array")
+
+const number =[1,2,3,4,5,6,7,8,9];
+
+console.log(number);
+const nama =["sahid", "lia", "minas"];
+console.log(nama);
+
+const merge =[...number, ...nama];
+
+console.log(merge);
