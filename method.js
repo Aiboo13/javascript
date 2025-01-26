@@ -136,26 +136,45 @@ let films =[
 
 // 
 
-console.log("pengabungan buat obaject dengan object");
+// console.log("pengabungan buat obaject dengan object");
 
-const member ={
-  name : 'irawan',
-  id : 7216378623681,
-  password : "irawan 123#"
+// const member ={
+//   name : 'irawan',
+//   id : 7216378623681,
+//   password : "irawan 123#"
+// }
+
+// console.log(member)
+
+// const plusInfo={
+//   age : 19,
+//   addres : "malang"
+// };
+
+
+// console.log(plusInfo);
+
+// const compliteInfo ={...member, ...plusInfo};
+
+// console.log(compliteInfo)
+
+// // jadi object itu menggunakan kurung kurawal 
+
+
+console.log("rest parmametr");
+
+const peserta =["rudi", "rudy", "rud i", "bagas", "halo"];
+
+for (const element of peserta) {
+  console.log(element)
 }
 
-console.log(member)
+const champion = (gold, silver, brown, ...other) =>{
+  // baca sendiri nya
+  console.log(`mendali emas di raih oleh ${gold}`);
+  console.log(`mendali silver di raih oleh ${silver}`);
+  console.log(`mendali kayu di raih oleh ${brown}`);
+  console.log(`peserta lainya ${other}`);
+}
 
-const plusInfo={
-  age : 19,
-  addres : "malang"
-};
-
-
-console.log(plusInfo);
-
-const compliteInfo ={...member, ...plusInfo};
-
-console.log(compliteInfo)
-
-// jadi object itu menggunakan kurung kurawal 
+console.log(champion(...peserta));
