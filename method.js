@@ -177,4 +177,14 @@ const champion = (gold, silver, brown, ...other) =>{
   console.log(`peserta lainya ${other}`);
 }
 
-console.log(champion(...peserta));
+champion(...peserta)
+
+
+console.log("distrucktion array atau sama kayak di atas namun tidak mengnakan function")
+
+const [gold, silver, brown, lain] = peserta;
+
+console.log(`kamu mendapatka mendali emas${gold}`)
+console.log(silver)
+console.log(brown)
+console.log(lain)
