@@ -117,22 +117,19 @@ let films =[
 
 // console.log(`ini bentuk dari method every "${every}"`)
 
-console.log("devault of parameter");
+// 
 
-function dadu(sisi = 1){
-  return Math.floor(Math.random() * 6) + 1;
-}
-
-console.log(dadu());
+console.log("spereed opertaor pada function");
+console.log("mengubah array dan objeck menjadi deret parameter");
 
 
-function sapa(name = "you", msg ="iyaw"){
-  console.log(`from ${name} massage ${msg}`);
-}
-function sapaa(name, msg ="iyawwwwwwwwwwww"){
-  return `from ${msg} massage ${name}`
-}
+const angka = (1,2,4,5,3,7,8,9);
+const angka1 = [1,2,4,5,3,7,8,9];
 
-sapa();
+console.log("'math.max(anga)' function max");
 
-console.log(sapaa("hale"));
+console.log(Math.max(angka));
+
+console.log("'math.min(anga)' function min");
+console.log(Math.min(...angka1));
+// pengunaan "..." untuk sebuah array
