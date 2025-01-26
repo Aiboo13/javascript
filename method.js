@@ -47,64 +47,64 @@ let films =[
   }
 ];
 
-const pembanding= films.reduce((pembanding1, pembanding2) =>{
-  if(pembanding1.rate < pembanding2.rate){
-    // jika tanda ">" mengarah ke pembanding1 dan returnya pembanding 1 maka yang di cari adalh yang terbear
-    return pembanding1
-  }
-  return pembanding2
-});
-
-console.log(pembanding)
-
-// console.log("this part for 'map'")
-
-// let mapping = films.map((upper) => {
-//   return upper.title.toUpperCase();
-// })
-
-// let ratting = films.filter((n) => {
-//   return n.rate >= 90;
-// })
-
-// console.log("combination filter and map");
-
-// let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
-//   // function di dalam situ tak perlu "=>" jika tidka mau menuliskan function maka di ganti dnegan =>
-//   console.log(`${judul.title} dengan rate ${judul.rate}`)
-// } )
-
-// console.log("time out and time interval");
-
-// setTimeout(() =>{
-//   console.log("jika pesan ini muncul maka kode di esekusi setelah 3 detik")
-// }, 3000);
-
-// function loop(){
-//   for(let i= 0; i <= 10000; i++){
-//     setTimeout(() => {
-//       console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
-//     }, i * 500);
+// const pembanding= films.reduce((pembanding1, pembanding2) =>{
+//   if(pembanding1.rate < pembanding2.rate){
+//     // jika tanda ">" mengarah ke pembanding1 dan returnya pembanding 1 maka yang di cari adalh yang terbear
+//     return pembanding1
 //   }
+//   return pembanding2
+// });
+
+// console.log(pembanding)
+
+// // console.log("this part for 'map'")
+
+// // let mapping = films.map((upper) => {
+// //   return upper.title.toUpperCase();
+// // })
+
+// // let ratting = films.filter((n) => {
+// //   return n.rate >= 90;
+// // })
+
+// // console.log("combination filter and map");
+
+// // let Filmbagus = films.filter((film) => film.rate >= 80 ).map( (judul) =>{
+// //   // function di dalam situ tak perlu "=>" jika tidka mau menuliskan function maka di ganti dnegan =>
+// //   console.log(`${judul.title} dengan rate ${judul.rate}`)
+// // } )
+
+// // console.log("time out and time interval");
+
+// // setTimeout(() =>{
+// //   console.log("jika pesan ini muncul maka kode di esekusi setelah 3 detik")
+// // }, 3000);
+
+// // function loop(){
+// //   for(let i= 0; i <= 10000; i++){
+// //     setTimeout(() => {
+// //       console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
+// //     }, i * 500);
+// //   }
+// // }
+
+// // loop();
+
+// // console.log("some and every");
+
+// const Grade = [89,88,79,79,89,93,97,98,96];
+
+// const sum = Grade.reduce((object1, object2)=>{
+//   return object1 + object2;
+// })
+// console.log(sum)
+// console.log("================")
+// let summ = 0;
+// for (const element of Grade) {
+//   summ += element;
 // }
 
-// loop();
-
-// console.log("some and every");
-
-const Grade = [89,88,79,79,89,93,97,98,96];
-
-const sum = Grade.reduce((object1, object2)=>{
-  return object1 + object2;
-})
-console.log(sum)
-console.log("================")
-let summ = 0;
-for (const element of Grade) {
-  summ += element;
-}
-
-console.log(summ);
+// console.log(summ);
 
 // const Some = Grade.some((nilai) => nilai >= 90 );
 // // beda dari some, every lebih fleksibel jika salah satu dari meraka tidak memenuhi syarat maka output nya tetep true
@@ -116,3 +116,23 @@ console.log(summ);
 // // jadi some itu harus semuanya memenuhi syarat supaya true
 
 // console.log(`ini bentuk dari method every "${every}"`)
+
+console.log("devault of parameter");
+
+function dadu(sisi = 1){
+  return Math.floor(Math.random() * 6) + 1;
+}
+
+console.log(dadu());
+
+
+function sapa(name = "you", msg ="iyaw"){
+  console.log(`from ${name} massage ${msg}`);
+}
+function sapaa(name, msg ="iyawwwwwwwwwwww"){
+  return `from ${msg} massage ${name}`
+}
+
+sapa();
+
+console.log(sapaa("hale"));
