@@ -47,6 +47,18 @@ let films =[
   }
 ];
 
+const listFilm = films.map((film) =>{
+  console.log(`judul film ${film.title} dengan rate ${film.rate}`);
+});
+
+console.log("=======================================================================================")
+
+const Listfilm = films.map(({title, rate})=> {
+  // yang penting nama nya sama pada array object
+  console.log(`judul film ${title} dengan rate ${rate}`)
+})
+console.log(Listfilm);
+
 // const pembanding= films.reduce((pembanding1, pembanding2) =>{
 //   if(pembanding1.rate < pembanding2.rate){
 //     // jika tanda ">" mengarah ke pembanding1 dan returnya pembanding 1 maka yang di cari adalh yang terbear
