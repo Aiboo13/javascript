@@ -161,30 +161,44 @@ let films =[
 // // jadi object itu menggunakan kurung kurawal 
 
 
-console.log("rest parmametr");
+// console.log("rest parmametr");
 
-const peserta =["rudi", "rudy", "rud i", "bagas", "halo"];
+// const peserta =["rudi", "rudy", "rud i", "bagas", "halo"];
 
-for (const element of peserta) {
-  console.log(element)
+// for (const element of peserta) {
+//   console.log(element)
+// }
+
+// const champion = (gold, silver, brown, ...other) =>{
+//   // baca sendiri nya
+//   console.log(`mendali emas di raih oleh ${gold}`);
+//   console.log(`mendali silver di raih oleh ${silver}`);
+//   console.log(`mendali kayu di raih oleh ${brown}`);
+//   console.log(`peserta lainya ${other}`);
+// }
+
+// champion(...peserta)
+
+
+// console.log("distrucktion array atau sama kayak di atas namun tidak mengnakan function")
+
+// const [gold, silver, brown, lain] = peserta;
+
+// console.log(`kamu mendapatka mendali emas${gold}`)
+// console.log(silver)
+// console.log(brown)
+// console.log(lain)
+
+
+console.log("distruction object");
+
+const profile={
+  name : "haikal",
+  email : "ajdewyfbcwiubdk@gmail.com",
+  addres : "west java"
 }
 
-const champion = (gold, silver, brown, ...other) =>{
-  // baca sendiri nya
-  console.log(`mendali emas di raih oleh ${gold}`);
-  console.log(`mendali silver di raih oleh ${silver}`);
-  console.log(`mendali kayu di raih oleh ${brown}`);
-  console.log(`peserta lainya ${other}`);
-}
+console.log(profile)
 
-champion(...peserta)
-
-
-console.log("distrucktion array atau sama kayak di atas namun tidak mengnakan function")
-
-const [gold, silver, brown, lain] = peserta;
-
-console.log(`kamu mendapatka mendali emas${gold}`)
-console.log(silver)
-console.log(brown)
-console.log(lain)
+const {name, email, addres:alamat} = profile;
+// kesimpulan untuk di dalam kurung kurawal harus sama dnegan yang ada di atas name email adres dll
