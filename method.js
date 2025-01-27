@@ -226,25 +226,78 @@
 
 
 const arr = [1,2,34,6,6,7,8];
-console.log(arr);
+// console.log(arr);
 
 // Array.prototype.pop = function () {
 //   console.log("gabisa")
 //   // ingat baik baik dalam pengunaan prototype
 // };
 
-Array.prototype.hapus = function (){
-  return this.pop()
+// Array.prototype.hapus = function (){
+//   return this.pop()
+//   // untuk memberi function pada hapus seperti function pop
+// }
+
+// arr.pop();
+
+// console.log(arr)
+
+console.log("factory function")
+
+const hex = (r,g,b) => {
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  // slice harus kecil semua
 }
 
-arr.pop();
+hex(123,456,345);
 
-console.log(arr)
+const rgb = (r,g,b) => {
+  return `${r} ${g} ${b}`
+}
 
-arr.hapus();
+  function makeColor (r,g,b){
+  const color = {};
 
-console.log(arr)
+  color.r = r;
+  color.g = g;
+  color.b = b;
 
-arr.hapus();
+  color.rgb = function() {
+    const {r,g,b} = this;
+    return `${r},${g},${b}`
+  }
+  color.hex = function(){
+    const {r,g,b} = this;
+    // dengan ini pemangilan pada return tak pelu kata this
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    // slice harus kecil semua
+  }
+  return color;
+  // terhubung pada const color 
+}
 
-console.log(arr)
+const color = makeColor(113,111,90);
+console.log(color.rgb())
+
+function makeColor(r, g, b) {
+  const color = {}; // Buat objek kosong bernama 'color'
+
+  color.r = r; // Simpan nilai 'r' ke dalam properti 'r' di objek 'color'
+  color.g = g; // Simpan nilai 'g' ke dalam properti 'g' di objek 'color'
+  color.b = b; // Simpan nilai 'b' ke dalam properti 'b' di objek 'color'
+
+  // Tambahkan metode 'rgb' ke objek 'color'
+  color.rgb = function () {
+    const { r, g, b } = this; // Destruktur properti 'r', 'g', 'b' dari objek ini (color)
+    return `${r},${g},${b}`; // Gabungkan nilai RGB menjadi string format "r,g,b"
+  };
+
+  // Tambahkan metode 'hex' ke objek 'color'
+  color.hex = function () {
+    const { r, g, b } = this; // Destruktur properti 'r', 'g', 'b' dari objek ini (color)
+    // Hitung nilai heksadesimal dan ubah ke string hex dengan '#' di depannya
+    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  };
+
+  return color; // Kembalikan objek 'color', sehingga bisa digunakan di luar fungsi
+}
