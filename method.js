@@ -381,7 +381,10 @@ color.prototype.rgb = function(){
 color.prototype.rgba = function (a = 1.0){
   const {r,g,b} = this;
     // dengan ini pemangilan pada return tak pelu kata this
-    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return `rgba(${r},${g},${b},${a})`;
     // slice harus kecil semua
   
 }
+
+document.body.style.background = new color(250,0,0).rgb();
+document.body.style.background = new color(250, 0, 0).rgb();
