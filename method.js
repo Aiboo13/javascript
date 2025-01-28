@@ -497,3 +497,32 @@ const seaColor = new Color(152, 216, 239,"sea");
 // kesimpulan jadi tanda .name method itu ungu maka itu menggunakan tanda kurung buka dan tutup
 
 console.log("hsl srgb")
+
+
+console.log("fungsi super");
+
+class peliharaan { // ini adalah perrent object atau object induk
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+  makan() {
+    return `${this.name} lagi makan`
+  }
+}
+
+class kucing extends peliharaan { //ini children
+  meong(){
+    return `meoong..!!!`
+  }
+}
+class anjing extends peliharaan  { //ini children
+  gonggong(){
+    return `guguk`
+  }
+}
+
+
+const kucingg = new kucing("albin", 19);
+console.log(kucingg.meong())
+console.log(kucingg.makan())
