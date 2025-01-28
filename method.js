@@ -402,20 +402,24 @@ class Color {
     }
     innerRgb(){
       const {r,g,b} = this;
+      // this ini merujuk pada argument constructor
       return `${r},${g},${b}`
     }
     // membuat method 
     rgb(){
       const {r,g,b} = this;
+      // this ini merujuk pada argument constructor
       return `rgb(${this.innerRgb()})`;
       // saat memangil method harus menggunakan kurang buka dan tutup()
     }
     rgba(a=1.0){
       const {r,g,b} = this;
+      // this ini merujuk pada argument constructor
       return `rgba(${r},${g},${b},${a})`;
     }
     hex(){
       const {r,g,b} = this;
+      // this ini merujuk pada argument constructor
       return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 }
