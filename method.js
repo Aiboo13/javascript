@@ -374,17 +374,42 @@ function color(r,g,b){
 }
 
 color.prototype.rgb = function(){
-  const { r, g, b } = this;
-  return `${r},${g},${b}`;
+  const {r,g,b} = this;
+  return `rgb(${r},${g},${b})`;
+  // format tersebut sudah paten untuk css 
 }
 
 color.prototype.rgba = function (a = 1.0){
   const {r,g,b} = this;
     // dengan ini pemangilan pada return tak pelu kata this
     return `rgba(${r},${g},${b},${a})`;
-    // slice harus kecil semua
-  
+    // penulisan rgba sudha paten tidak bisa diganti  
+}
+// document.body.style.backgroundColor = new color(20, 20, 20).rgb(); // Berfungsi sekarang
+
+// document.body.style.backgroundColor = new color(60,57,77).rgba();
+
+class Color {
+  constructor(r,g,b, name){
+    // fungsi yang pertama kali dijalankan
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+    }
+    Colorname(){
+      console.log("this is name color " + this.name)
+    }
+    // membuat method 
+    rgb(){
+      const {r,g,b} = this;
+      return `rgb(${r},${g},${b})`;
+    }
 }
 
-document.body.style.background = new color(250,0,0).rgb();
-document.body.style.background = new color(250, 0, 0).rgb();
+const seaColor = new Color(152, 216, 239,"sea")
+// jangan lupa kata kunci new 
+document.body.style.backgroundColor = seaColor.rgb()
+new Color();
+
+
