@@ -1,4 +1,4 @@
-// // // 
+// // //
 
 // // // console.log("this is part arrow function");
 
@@ -129,7 +129,7 @@
 
 // // // console.log(`ini bentuk dari method every "${every}"`)
 
-// // // 
+// // //
 
 // // // console.log("spereed opertaor pada function");
 // // // console.log("mengubah array dan objeck menjadi deret parameter");
@@ -146,7 +146,7 @@
 // // // console.log(Math.min(...angka1));
 // // // // pengunaan "..." untuk sebuah array
 
-// // // 
+// // //
 
 // // // console.log("pengabungan buat obaject dengan object");
 
@@ -170,7 +170,7 @@
 
 // // // console.log(compliteInfo)
 
-// // // // jadi object itu menggunakan kurung kurawal 
+// // // // jadi object itu menggunakan kurung kurawal
 
 
 // // // console.log("rest parmametr");
@@ -273,7 +273,7 @@ const rgb = (r,g,b) => {
     // slice harus kecil semua
   }
   return color;
-  // terhubung pada const color 
+  // terhubung pada const color
 }
 
 // const color = makeColor(113,111,90);
@@ -308,7 +308,7 @@ const rgb = (r,g,b) => {
 //   nilai.nilai1 = nilai1;
 //   nilai.nilai2 = nilai2;
 //   // nilai diatas ini adalah isi dari object nilai
-  
+
 //   nilai.perkalian = function(){
 //     const {nilai1,nilai2} = this;
 //     const hasil = nilai1 * nilai2;
@@ -376,14 +376,14 @@ function color(r,g,b){
 color.prototype.rgb = function(){
   const {r,g,b} = this;
   return `rgb(${r},${g},${b})`;
-  // format tersebut sudah paten untuk css 
+  // format tersebut sudah paten untuk css
 }
 
 color.prototype.rgba = function (a = 1.0){
   const {r,g,b} = this;
     // dengan ini pemangilan pada return tak pelu kata this
     return `rgba(${r},${g},${b},${a})`;
-    // penulisan rgba sudha paten tidak bisa diganti  
+    // penulisan rgba sudha paten tidak bisa diganti
 }
 // document.body.style.backgroundColor = new color(20, 20, 20).rgb(); // Berfungsi sekarang
 
@@ -406,7 +406,7 @@ class Color {
       // this ini merujuk pada argument constructor
       return `${r},${g},${b}`
     }
-    // membuat method 
+    // membuat method
     rgb(){
       const {r,g,b} = this;
       // this ini merujuk pada argument constructor
@@ -441,14 +441,14 @@ class Color {
       const newHue = (h + 180) % 360;
       return `hsl(${newHue}, ${s}%, ${l}%)`;
     }
-    
+
     calcHSL(){
       let { r, g, b } = this;
       // Make r, g, and b fractions of 1
       r /= 255;
       g /= 255;
       b /= 255;
-  
+
       // Find greatest and smallest channel values
       let cmin = Math.min(r, g, b),
         cmax = Math.max(r, g, b),
@@ -465,17 +465,17 @@ class Color {
         h = (b - r) / delta + 2;
       // Blue is max
       else h = (r - g) / delta + 4;
-  
+
       h = Math.round(h * 60);
-  
+
       // Make negative hues positive behind 360°
       if (h < 0) h += 360;
       // Calculate lightness
       l = (cmax + cmin) / 2;
-  
+
       // Calculate saturation
       s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
-  
+
       // Multiply l and s by 100
       s = +(s * 100).toFixed(1);
       l = +(l * 100).toFixed(1);
@@ -483,12 +483,12 @@ class Color {
       this.s = s;
       this.l = l;
     }
-  
-  
+
+
 }
 
 const seaColor = new Color(152, 216, 239,"sea");
-// // jangan lupa kata kunci new 
+// // jangan lupa kata kunci new
 // document.body.style.backgroundColor = seaColor.rgba()
 // console.log(seaColor.name);
 // console.log(seaColor.innerRgb());
@@ -512,11 +512,18 @@ class peliharaan { // ini adalah perrent object atau object induk
 }
 
 class kucing extends peliharaan { //ini children
+    // parretn class
+    constructor(name, age, lives){
+      super(name,age);
+      // untuk menambhak nilai pada children tanpa menggagu yang lain dan juga tk berpengaruh pada perrent
+      this.lives = lives;
+    }
   meong(){
     return `meoong..!!!`
   }
 }
 class anjing extends peliharaan  { //ini children
+  // parretn class
   gonggong(){
     return `guguk`
   }
