@@ -326,3 +326,39 @@ const uji = mathh(9,9)
 console.log(uji.penambahan())
 
 
+function pangkatPembagian(nilai1,nilai2){
+  const nilai={ };
+  nilai.nilai1 = nilai1;
+  nilai.pangkat = nilai2;
+
+  nilai.perpangkatan= function(){
+    const {nilai1,pangkat} = this;
+    // kenapa pangkat karena object nilai.pangkat bukan nilai2
+    const hasil = nilai1 ** pangkat;
+    return hasil;
+  }
+  nilai.pembagian=function(){
+    const {nilai1,pangkat} = this;
+    const hasil = nilai1 / pangkat;
+    return hasil;
+
+  }
+  return nilai;
+}
+
+const prompt1 = parseInt(prompt("masukan nilai 1"))
+const promt2 = parseInt(prompt("masukan nilai 2"))
+// perseint untuk mengubahindputan nomor dlam bentuk strik ke bentuk number
+const jawab = prompt("pembagian atau perpangkatan'dengan kode ('/'  or '**')'")
+
+if(jawab == "**"){
+  const pangkat = pangkatPembagian(prompt1,promt2);
+  console.log(pangkat.perpangkatan())
+}else if (jawab == "/"){
+  const pangkat = pangkatPembagian(prompt1,promt2);
+  console.log(pangkat.pembagian())
+}else{
+  console.log("eror");
+}
+
+
