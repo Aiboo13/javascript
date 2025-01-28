@@ -400,16 +400,32 @@ class Color {
     Colorname(){
       console.log("this is name color " + this.name)
     }
+    innerRgb(){
+      const {r,g,b} = this;
+      return `${r},${g},${b}`
+    }
     // membuat method 
     rgb(){
       const {r,g,b} = this;
-      return `rgb(${r},${g},${b})`;
+      return `rgb(${this.innerRgb()})`;
+      // saat memangil method harus menggunakan kurang buka dan tutup()
+    }
+    rgba(a=1.0){
+      const {r,g,b} = this;
+      return `rgba(${r},${g},${b},${a})`;
+    }
+    hex(){
+      const {r,g,b} = this;
+      return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     }
 }
 
 const seaColor = new Color(152, 216, 239,"sea")
 // jangan lupa kata kunci new 
-document.body.style.backgroundColor = seaColor.rgb()
-new Color();
+document.body.style.backgroundColor = seaColor.rgba()
+console.log(seaColor.name);
+console.log(seaColor.innerRgb());
 
+
+// kesimpulan jadi tanda .name method itu ungu maka itu menggunakan tanda kurung buka dan tutup
 
