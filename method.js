@@ -301,3 +301,28 @@ function makeColor(r, g, b) {
 
   return color; // Kembalikan objek 'color', sehingga bisa digunakan di luar fungsi
 }
+
+
+function mathh(nilai1,nilai2){
+  const nilai ={ };
+  nilai.nilai1 = nilai1;
+  nilai.nilai2 = nilai2;
+  // nilai diatas ini adalah isi dari object nilai
+  
+  nilai.perkalian = function(){
+    const {nilai1,nilai2} = this;
+    const hasil = nilai1 * nilai2;
+    return `${hasil}`;
+  }
+  nilai.penambahan = function(){
+    const {nilai1,nilai2} = this;
+    const hasil = nilai1 + nilai2;
+    return hasil;
+  }
+  return nilai
+}
+
+const uji = mathh(9,9)
+console.log(uji.penambahan())
+
+
