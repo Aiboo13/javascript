@@ -48,4 +48,23 @@
 //   }
 // })
 
+// console.log("tes dibawah ini ada settimeout ");
+
+// setTimeout(() => {
+//   console.log("this massage return after 3 second");
+// }, 3000);
+
+// function loop() {
+//   for (let i = 0; i <= 50; i++) {
+//     let id = setTimeout(() => {
+//       console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
+//     }, i * 1000);
+//     if(i == 20){
+//       clearTimeout(id)
+//     }
+//   }
+  
+// }
+// loop()
+
 

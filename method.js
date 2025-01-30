@@ -7,7 +7,6 @@
 // // //   return x * x;
 // // // };
 
-
 // // // console.log('implisin return atau tidak menggunakan return dama function jika perintahnya dalam function pendek atau hanya satu baris');
 
 // // // const random = () =>(
@@ -92,13 +91,13 @@
 // // // //   console.log("jika pesan ini muncul maka kode di esekusi setelah 3 detik")
 // // // // }, 3000);
 
-// // // // function loop(){
-// // // //   for(let i= 0; i <= 10000; i++){
-// // // //     setTimeout(() => {
-// // // //       console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
-// // // //     }, i * 500);
-// // // //   }
-// // // // }
+function loop(){
+  for(let i= 0; i <= 10000; i++){
+    setTimeout(() => {
+      console.log(`haloooooooooooooooooooooooooooooooo ${i}`);
+    }, i * 500);
+  }
+}
 
 // // // // loop();
 
@@ -134,7 +133,6 @@
 // // // console.log("spereed opertaor pada function");
 // // // console.log("mengubah array dan objeck menjadi deret parameter");
 
-
 // // // const angka = (1,2,4,5,3,7,8,9);
 // // const angka1 = [1,2,4,5,3,7,8,9];
 
@@ -163,7 +161,6 @@
 // // //   addres : "malang"
 // // // };
 
-
 // // // console.log(plusInfo);
 
 // // // const compliteInfo ={...member, ...plusInfo};
@@ -171,7 +168,6 @@
 // // // console.log(compliteInfo)
 
 // // // // jadi object itu menggunakan kurung kurawal
-
 
 // // // console.log("rest parmametr");
 
@@ -191,7 +187,6 @@
 
 // // // champion(...peserta)
 
-
 // // // console.log("distrucktion array atau sama kayak di atas namun tidak mengnakan function")
 
 // // // const [gold, silver, brown, lain] = peserta;
@@ -200,7 +195,6 @@
 // // // console.log(silver)
 // // // console.log(brown)
 // // // console.log(lain)
-
 
 // // console.log("distruction object");
 
@@ -221,9 +215,7 @@
 // // console.log("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
 // // console.log(angka1)
 
-
 // // // kesimpulan untuk di dalam kurung kurawal harus sama dnegan yang ada di atas name email adres dll
-
 
 // const arr = [1,2,34,6,6,7,8];
 // // console.log(arr);
@@ -242,36 +234,36 @@
 
 // // console.log(arr)
 
-console.log("factory function")
+console.log("factory function");
 
-const hex = (r,g,b) => {
-  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+const hex = (r, g, b) => {
+  return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
   // slice harus kecil semua
-}
+};
 
-hex(123,456,345);
+hex(123, 456, 345);
 
-const rgb = (r,g,b) => {
-  return `${r} ${g} ${b}`
-}
+const rgb = (r, g, b) => {
+  return `${r} ${g} ${b}`;
+};
 
-  function makeColor (r,g,b){
+function makeColor(r, g, b) {
   const color = {};
 
   color.r = r;
   color.g = g;
   color.b = b;
 
-  color.rgb = function() {
-    const {r,g,b} = this;
-    return `${r},${g},${b}`
-  }
-  color.hex = function(){
-    const {r,g,b} = this;
+  color.rgb = function () {
+    const { r, g, b } = this;
+    return `${r},${g},${b}`;
+  };
+  color.hex = function () {
+    const { r, g, b } = this;
     // dengan ini pemangilan pada return tak pelu kata this
-    return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
     // slice harus kecil semua
-  }
+  };
   return color;
   // terhubung pada const color
 }
@@ -302,7 +294,6 @@ const rgb = (r,g,b) => {
 //   return color; // Kembalikan objek 'color', sehingga bisa digunakan di luar fungsi
 // }
 
-
 // function mathh(nilai1,nilai2){
 //   const nilai ={ };
 //   nilai.nilai1 = nilai1;
@@ -324,7 +315,6 @@ const rgb = (r,g,b) => {
 
 // const uji = mathh(9,9)
 // console.log(uji.penambahan())
-
 
 // function pangkatPembagian(nilai1,nilai2){
 //   const nilai={ };
@@ -361,11 +351,9 @@ const rgb = (r,g,b) => {
 //   console.log("eror");
 // }
 
+console.log("constructer function");
 
-
-console.log("constructer function")
-
-function color(r,g,b){
+function color(r, g, b) {
   this.r = r;
   this.g = g;
   this.b = b;
@@ -373,163 +361,187 @@ function color(r,g,b){
   // karena mengunakan nya seperti itu harus menggunakan this
 }
 
-color.prototype.rgb = function(){
-  const {r,g,b} = this;
+color.prototype.rgb = function () {
+  const { r, g, b } = this;
   return `rgb(${r},${g},${b})`;
   // format tersebut sudah paten untuk css
-}
+};
 
-color.prototype.rgba = function (a = 1.0){
-  const {r,g,b} = this;
-    // dengan ini pemangilan pada return tak pelu kata this
-    return `rgba(${r},${g},${b},${a})`;
-    // penulisan rgba sudha paten tidak bisa diganti
-}
+color.prototype.rgba = function (a = 1.0) {
+  const { r, g, b } = this;
+  // dengan ini pemangilan pada return tak pelu kata this
+  return `rgba(${r},${g},${b},${a})`;
+  // penulisan rgba sudha paten tidak bisa diganti
+};
 // document.body.style.backgroundColor = new color(20, 20, 20).rgb(); // Berfungsi sekarang
 
 // document.body.style.backgroundColor = new color(60,57,77).rgba();
 
 class Color {
-  constructor(r,g,b, name){
+  constructor(r, g, b, name) {
     // fungsi yang pertama kali dijalankan
     this.r = r;
     this.g = g;
     this.b = b;
     this.name = name;
     this.calcHSL();
-    }
-    Colorname(){
-      console.log("this is name color " + this.name)
-    }
-    innerRgb(){
-      const {r,g,b} = this;
-      // this ini merujuk pada argument constructor
-      return `${r},${g},${b}`
-    }
-    // membuat method
-    rgb(){
-      const {r,g,b} = this;
-      // this ini merujuk pada argument constructor
-      return `rgb(${this.innerRgb()})`;
-      // saat memangil method harus menggunakan kurang buka dan tutup()
-    }
-    // membuat method
-    rgba(a=1.0){
-      const {r,g,b} = this;
-      // this ini merujuk pada argument constructor
-      return `rgba(${r},${g},${b},${a})`;
-    }
-    // membuat method
-    hex(){
-      const {r,g,b} = this;
-      // this ini merujuk pada argument constructor
-      return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    }
+  }
+  Colorname() {
+    console.log("this is name color " + this.name);
+  }
+  innerRgb() {
+    const { r, g, b } = this;
+    // this ini merujuk pada argument constructor
+    return `${r},${g},${b}`;
+  }
+  // membuat method
+  rgb() {
+    const { r, g, b } = this;
+    // this ini merujuk pada argument constructor
+    return `rgb(${this.innerRgb()})`;
+    // saat memangil method harus menggunakan kurang buka dan tutup()
+  }
+  // membuat method
+  rgba(a = 1.0) {
+    const { r, g, b } = this;
+    // this ini merujuk pada argument constructor
+    return `rgba(${r},${g},${b},${a})`;
+  }
+  // membuat method
+  hex() {
+    const { r, g, b } = this;
+    // this ini merujuk pada argument constructor
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
 
-    hsl(){
-      const {h,s,l} = this;
-      return `hsl(${h}, ${s}%, ${l}%)`
-    }
+  hsl() {
+    const { h, s, l } = this;
+    return `hsl(${h}, ${s}%, ${l}%)`;
+  }
 
-    fulllysaturated(){
-      const {h,l} = this;
-      return `hsl(${h}, 100%, ${l}%)`
-    }
+  fulllysaturated() {
+    const { h, l } = this;
+    return `hsl(${h}, 100%, ${l}%)`;
+  }
 
-    opposite(){
-      const {h,s,l} = this;
-      const newHue = (h + 180) % 360;
-      return `hsl(${newHue}, ${s}%, ${l}%)`;
-    }
+  opposite() {
+    const { h, s, l } = this;
+    const newHue = (h + 180) % 360;
+    return `hsl(${newHue}, ${s}%, ${l}%)`;
+  }
 
-    calcHSL(){
-      let { r, g, b } = this;
-      // Make r, g, and b fractions of 1
-      r /= 255;
-      g /= 255;
-      b /= 255;
+  calcHSL() {
+    let { r, g, b } = this;
+    // Make r, g, and b fractions of 1
+    r /= 255;
+    g /= 255;
+    b /= 255;
 
-      // Find greatest and smallest channel values
-      let cmin = Math.min(r, g, b),
-        cmax = Math.max(r, g, b),
-        delta = cmax - cmin,
-        h = 0,
-        s = 0,
-        l = 0;
-      if (delta == 0) h = 0;
-      else if (cmax == r)
-        // Red is max
-        h = ((g - b) / delta) % 6;
-      else if (cmax == g)
-        // Green is max
-        h = (b - r) / delta + 2;
-      // Blue is max
-      else h = (r - g) / delta + 4;
+    // Find greatest and smallest channel values
+    let cmin = Math.min(r, g, b),
+      cmax = Math.max(r, g, b),
+      delta = cmax - cmin,
+      h = 0,
+      s = 0,
+      l = 0;
+    if (delta == 0) h = 0;
+    else if (cmax == r)
+      // Red is max
+      h = ((g - b) / delta) % 6;
+    else if (cmax == g)
+      // Green is max
+      h = (b - r) / delta + 2;
+    // Blue is max
+    else h = (r - g) / delta + 4;
 
-      h = Math.round(h * 60);
+    h = Math.round(h * 60);
 
-      // Make negative hues positive behind 360°
-      if (h < 0) h += 360;
-      // Calculate lightness
-      l = (cmax + cmin) / 2;
+    // Make negative hues positive behind 360°
+    if (h < 0) h += 360;
+    // Calculate lightness
+    l = (cmax + cmin) / 2;
 
-      // Calculate saturation
-      s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
+    // Calculate saturation
+    s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
 
-      // Multiply l and s by 100
-      s = +(s * 100).toFixed(1);
-      l = +(l * 100).toFixed(1);
-      this.h = h;
-      this.s = s;
-      this.l = l;
-    }
-
-
+    // Multiply l and s by 100
+    s = +(s * 100).toFixed(1);
+    l = +(l * 100).toFixed(1);
+    this.h = h;
+    this.s = s;
+    this.l = l;
+  }
 }
 
-const seaColor = new Color(152, 216, 239,"sea");
+const seaColor = new Color(152, 216, 239, "sea");
 // // jangan lupa kata kunci new
 // document.body.style.backgroundColor = seaColor.rgba()
 // console.log(seaColor.name);
 // console.log(seaColor.innerRgb());
 
-
 // kesimpulan jadi tanda .name method itu ungu maka itu menggunakan tanda kurung buka dan tutup
 
-console.log("hsl srgb")
+// console.log("hsl srgb");
 
+// console.log("fungsi super");
 
-console.log("fungsi super");
+// class peliharaan {
+//   // ini adalah perrent object atau object induk
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+//   makan() {
+//     return `${this.name} lagi makan`;
+//   }
+// }
 
-class peliharaan { // ini adalah perrent object atau object induk
-  constructor(name, age){
-    this.name = name;
-    this.age = age;
-  }
-  makan() {
-    return `${this.name} lagi makan`
-  }
+// class kucing extends peliharaan {
+//   //ini children
+//   // parretn class
+//   constructor(name, age, lives) {
+//     super(name, age);
+//     // untuk menambhak nilai pada children tanpa menggagu yang lain dan juga tk berpengaruh pada perrent
+//     this.lives = lives;
+//   }
+//   meong() {
+//     return `meoong..!!!`;
+//   }
+// }
+// class anjing extends peliharaan {
+//   //ini children
+//   // parretn class
+//   gonggong() {
+//     return `guguk`;
+//   }
+// }
+
+// const kucingg = new kucing("albin", 1, 7);
+// console.log(kucingg.age);
+// console.log(kucingg.makan());
+// console.log(kucingg.meong());
+// console.log(kucingg.lives);
+
+// const perkalian = (x, y) => x * y;
+// const akar = (x) => perkalian(x, x);
+
+// const pythagoras = (a, b, c) => {
+//   return akar(a) + akar(b) === akar(c);
+// };
+
+// console.log(pythagoras(9, 2, 3));
+
+// let angka = [1, 2, 3, 4, 5];
+
+// angka.forEach((num) => {
+//   console.log(num * 2); // Output: 2, 4, 6, 8, 10
+// });
+
+function angka(x,y){
+  return x + y ;
 }
 
-class kucing extends peliharaan { //ini children
-    // parretn class
-    constructor(name, age, lives){
-      super(name,age);
-      // untuk menambhak nilai pada children tanpa menggagu yang lain dan juga tk berpengaruh pada perrent
-      this.lives = lives;
-    }
-  meong(){
-    return `meoong..!!!`
-  }
-}
-class anjing extends peliharaan  { //ini children
-  // parretn class
-  gonggong(){
-    return `guguk`
-  }
-}
 
-
-const kucingg = new kucing("albin", 19);
-console.log(kucingg.meong())
-console.log(kucingg.makan())
+let a = () =>{
+  
+}
