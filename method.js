@@ -541,7 +541,22 @@ function angka(x,y){
   return x + y ;
 }
 
+let a = 3;
+let c = 3;
 
-let a = () =>{
-  
+
+function tambah(x,y){
+  return x + y;
 }
+tambah(a,c);
+
+setTimeout(() => {
+  
+}, timeout);
+
+let v = 9;
+let d = 10;
+
+let hasil = v + d;
+
+console.log(hasil);

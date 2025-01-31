@@ -3,13 +3,15 @@
 const requestCallback = (url, success, failure) => {
 	const delay = Math.floor(Math.random() * 4500) + 500;
 	setTimeout(() => {
-		if (delay > 4000) {
+		if (delay > 6000) {
 			failure('Error: Connection Timeout');
 		} else {
 			success(`Success: ${url} (${delay}ms)`);
 		}
 	}, delay);
 };
+
+
 
 // Promise version
 const requestPromise = (url) => {
@@ -33,6 +35,67 @@ async function requestHandler() {
 		console.log('Pesan Error', error);
 	}
 }
+
+requestCallback(`movie.com`, function(response){
+	// jangan lupa kasih coma 
+	console.log('success', response);
+	requestCallback(`movie.com`, function(response){
+		// jangan lupa kasih coma 
+		console.log('success', response);
+		requestCallback(`movie.com`, function(response){
+			// jangan lupa kasih coma 
+			console.log('success', response);
+			requestCallback(`movie.com`, function(response){
+				// jangan lupa kasih coma 
+				console.log('success', response);
+				requestCallback(`movie.com`, function(response){
+					// jangan lupa kasih coma 
+					console.log('success', response);
+					requestCallback(`movie.com`, function(response){
+						// jangan lupa kasih coma 
+						console.log('success', response);
+						requestCallback(`movie.com`, function(response){
+							// jangan lupa kasih coma 
+							console.log('success', response);
+							requestCallback(`movie.com`, function(response){
+								// jangan lupa kasih coma 
+								console.log('success', response);
+								requestCallback(`movie.com`, function(response){
+									// jangan lupa kasih coma 
+									console.log('success', response);
+									requestCallback(`movie.com`, function(response){
+										// jangan lupa kasih coma 
+										console.log('success', response);
+									}, function(error){
+										console.log('error', error);
+									});
+								}, function(error){
+									console.log('error', error);
+								});
+							}, function(error){
+								console.log('error', error);
+							});
+						}, function(error){
+							console.log('error', error);
+						});
+					}, function(error){
+						console.log('error', error);
+					});
+				}, function(error){
+					console.log('error', error);
+				});
+			}, function(error){
+				console.log('error', error);
+			});
+		}, function(error){
+			console.log('error', error);
+		});
+	}, function(error){
+		console.log('error', error);
+	});
+}, function(error){
+	console.log('error', error);
+});
 
 let a = () => {
 	
@@ -136,3 +199,6 @@ let a = () => {
 // 		console.log('error', error);
 // 	}
 // );
+
+
+console.log
