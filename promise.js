@@ -84,11 +84,26 @@ const delayColorChange = (color,delay) => {
 }
 
 
- setInterval(() =>{
-	delayColorChange(`red`,2000)
- .then(() => delayColorChange(`blue`,2000))
- .then(() => delayColorChange(`green`,2000))
- .then(()=> delayColorChange(`yellow`,2000))
- .then(() => delayColorChange(`magenta`,2000))
- .then(() => delayColorChange(`pink`,2000))
- },3000)
+//  setInterval(() =>{
+// 	delayColorChange(`red`,2000)
+//  .then(() => delayColorChange(`blue`,2000))
+//  .then(() => delayColorChange(`green`,2000))
+//  .then(()=> delayColorChange(`yellow`,2000))
+//  .then(() => delayColorChange(`magenta`,2000))
+//  .then(() => delayColorChange(`pink`,2000))
+//  },3000)
+
+
+const a = async()=> {	
+	throw "sori hehehhe"
+	// throw ini dibuat kayak pesan erors 
+	// return "hello world"
+}
+
+a().then((res) =>{
+	// jangan lupa isi parameter di argument then
+	console.log(res)
+}).catch((err) =>{
+	// dan jangan lupa juga disini
+	console.log(err)
+})
