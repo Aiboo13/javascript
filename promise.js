@@ -18,7 +18,7 @@ const requestPromise = (url) => {
 	return new Promise((resolve, reject) => {
 		const delay = Math.floor(Math.random() * 4500) + 500;
 		setTimeout(() => {
-			if (delay > 6000) {
+			if (delay > 3000) {
 				reject('Error: Connection Timeout');
 			} else {
 				resolve(`Success: ${url} (${delay}ms)`);
@@ -36,122 +36,59 @@ async function requestHandler() {
 	}
 }
 
-requestCallback(`movie.com`, function(response){
-	// jangan lupa kasih coma 
-	console.log('success', response);
-	document.body.style.backgroundColor = "green";
-}, function(error){
-	console.log('error', error);
-	document.body.style.backgroundColor = "red";
-});
+// requestCallback(`movie.com`, function(response){
+// 	// jangan lupa kasih coma 
+// 	console.log('success', response);
+// 	document.body.style.backgroundColor = "green";
+// }, function(error){
+// 	console.log('error', error);
+// 	document.body.style.backgroundColor = "red";
+// });
 
 
-requestPromise(`google.com`).then(function(results){
-	// maksmud dari then ini memasukan ke parameter request Promise
-	console.log('success', results);
-}).catch(function(error){
-	// untuk penyambungan catch haru menggunakan titik
-	console.log('error', error);
-})
-// requestPromise('movie.com')
-// 	.then((result) => {
-// 		console.log('page 1');
-// 		console.log(result);
-// 		return requestPromise('movie.com');
-// 	})
-// 	.then(() => {
-// 		console.log('page 2');
-// 		return requestPromise('movie.com');
-// 	})
-// 	.then(() => {
-// 		console.log('page 3');
-// 		return requestPromise('movie.com');
-// 	})
-// 	.catch((err) => {
-// 		console.log(err);
-// 	});
-
-// requestPromise('movie.com')
-// 	.then((response) => {
-// 		console.log('success', response);
-// 		requestPromise('movie.com')
-// 			.then((response) => {
-// 				console.log('success', response);
-// 				requestPromise('movie.com')
-// 					.then((response) => {
-// 						console.log('success', response);
-// 						requestPromise('movie.com')
-// 							.then((response) => {
-// 								console.log('success', response);
-// 								requestPromise('movie.com')
-// 									.then((response) => {
-// 										console.log('success', response);
-// 									})
-// 									.catch((error) => {
-// 										console.log('error', error);
-// 									});
-// 							})
-// 							.catch((error) => {
-// 								console.log('error', error);
-// 							});
-// 					})
-// 					.catch((error) => {
-// 						console.log('error', error);
-// 					});
-// 			})
-// 			.catch((error) => {
-// 				console.log('error', error);
-// 			});
-// 	})
-// 	.catch((error) => {
-// 		console.log('error', error);
-// 	});
-
-// requestCallback(
-// 	'movie.com',
-// 	function (response) {
-// 		console.log('success', response);
-// 		requestCallback(
-// 			'movie.com',
-// 			function (response) {
-// 				console.log('success', response);
-// 				requestCallback(
-// 					'movie.com',
-// 					function (response) {
-// 						console.log('success', response);
-// 						requestCallback(
-// 							'movie.com',
-// 							function (response) {
-// 								console.log('success', response);
-// 								requestCallback(
-// 									'movie.com',
-// 									function (response) {
-// 										console.log('success', response);
-// 									},
-// 									function (error) {
-// 										console.log('error', error);
-// 									}
-// 								);
-// 							},
-// 							function (error) {
-// 								console.log('error', error);
-// 							}
-// 						);
-// 					},
-// 					function (error) {
-// 						console.log('error', error);
-// 					}
-// 				);
-// 			},
-// 			function (error) {
-// 				console.log('error', error);
-// 			}
-// 		);
-// 	},
-// 	function (error) {
-// 		console.log('error', error);
-// 	}
-// );
+// requestPromise(`google.com`).then(function(results){
+// 	// maksmud dari then ini memasukan ke parameter request Promise
+// 	console.log('success', results);
+// }).catch(function(error){
+// 	// untuk penyambungan catch haru menggunakan titik
+// 	console.log('error', error);
+// })
 
 
-console.log
+console.log('cara menngunkan promise denganbaik');
+
+// requestPromise(`google.com`).then((results)=>{
+// 	console.log(results);
+// 	console.log("this is page 1");
+// 	return requestPromise(`google.com`);
+// }).then((results)=>{
+// 	console.log(results);
+//   console.log("this is page 2");
+//   return requestPromise(`gpt.com`);
+// }).then((result)=>{
+// 	console.log(result);
+//   console.log("this is page 3");
+// 	return requestPromise(`bootsrap.com`);
+// }).catch((error)=>{
+// 	console.log(`eroor kawan coba lagi nanti ya`+ error);
+// });
+
+
+const delayColorChange = (color,delay) => {
+	return new Promise((resolve) => {
+    setTimeout(() => {
+      document.body.style.backgroundColor = color;
+      resolve();
+    }, delay);
+  });
+}
+
+
+ setInterval(() =>{
+	delayColorChange(`red`,2000)
+ .then(() => delayColorChange(`blue`,2000))
+ .then(() => delayColorChange(`green`,2000))
+ .then(()=> delayColorChange(`yellow`,2000))
+ .then(() => delayColorChange(`magenta`,2000))
+ .then(() => delayColorChange(`pink`,2000))
+ },3000)
