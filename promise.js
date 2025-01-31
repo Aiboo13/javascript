@@ -78,6 +78,7 @@ const delayColorChange = (color,delay) => {
 	return new Promise((resolve) => {
     setTimeout(() => {
       document.body.style.backgroundColor = color;
+			// document.getElementById('text').ATTRIBUTE_NODE.style.backgroundColor = color;
       resolve();
     }, delay);
   });
@@ -95,6 +96,7 @@ const delayColorChange = (color,delay) => {
 
 
 const a = async()=> {	
+	// kata asynchronous ini untk mengotomatiskan sebuah function ke promise 
 	throw "sori hehehhe"
 	// throw ini dibuat kayak pesan erors 
 	// return "hello world"
@@ -107,3 +109,24 @@ a().then((res) =>{
 	// dan jangan lupa juga disini
 	console.log(err)
 })
+
+console.log("penggunaan 'await'");
+
+
+async function changeColor() {
+	await delayColorChange('red',1000)
+	await delayColorChange('blue',1000)
+	await delayColorChange('green',1000)
+	await delayColorChange('yellow',1000)
+	await delayColorChange('magenta',1000)
+	await delayColorChange('pink',1000)
+	await delayColorChange('black',1000)
+	return "all done"
+}
+
+async function ubah() {
+	await changeColor();
+	alert('all done');
+}
+
+ubah()
