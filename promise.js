@@ -47,6 +47,7 @@ requestCallback(`movie.com`, function(response){
 
 
 requestPromise(`google.com`).then(function(results){
+	// maksmud dari then ini memasukan ke parameter request Promise
 	console.log('success', results);
 }).catch(function(error){
 	// untuk penyambungan catch haru menggunakan titik
