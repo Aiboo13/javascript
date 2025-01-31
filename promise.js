@@ -3,7 +3,7 @@
 const requestCallback = (url, success, failure) => {
 	const delay = Math.floor(Math.random() * 4500) + 500;
 	setTimeout(() => {
-		if (delay > 6000) {
+		if (delay > 4000) {
 			failure('Error: Connection Timeout');
 		} else {
 			success(`Success: ${url} (${delay}ms)`);
@@ -18,7 +18,7 @@ const requestPromise = (url) => {
 	return new Promise((resolve, reject) => {
 		const delay = Math.floor(Math.random() * 4500) + 500;
 		setTimeout(() => {
-			if (delay > 2000) {
+			if (delay > 6000) {
 				reject('Error: Connection Timeout');
 			} else {
 				resolve(`Success: ${url} (${delay}ms)`);
@@ -39,67 +39,19 @@ async function requestHandler() {
 requestCallback(`movie.com`, function(response){
 	// jangan lupa kasih coma 
 	console.log('success', response);
-	requestCallback(`movie.com`, function(response){
-		// jangan lupa kasih coma 
-		console.log('success', response);
-		requestCallback(`movie.com`, function(response){
-			// jangan lupa kasih coma 
-			console.log('success', response);
-			requestCallback(`movie.com`, function(response){
-				// jangan lupa kasih coma 
-				console.log('success', response);
-				requestCallback(`movie.com`, function(response){
-					// jangan lupa kasih coma 
-					console.log('success', response);
-					requestCallback(`movie.com`, function(response){
-						// jangan lupa kasih coma 
-						console.log('success', response);
-						requestCallback(`movie.com`, function(response){
-							// jangan lupa kasih coma 
-							console.log('success', response);
-							requestCallback(`movie.com`, function(response){
-								// jangan lupa kasih coma 
-								console.log('success', response);
-								requestCallback(`movie.com`, function(response){
-									// jangan lupa kasih coma 
-									console.log('success', response);
-									requestCallback(`movie.com`, function(response){
-										// jangan lupa kasih coma 
-										console.log('success', response);
-									}, function(error){
-										console.log('error', error);
-									});
-								}, function(error){
-									console.log('error', error);
-								});
-							}, function(error){
-								console.log('error', error);
-							});
-						}, function(error){
-							console.log('error', error);
-						});
-					}, function(error){
-						console.log('error', error);
-					});
-				}, function(error){
-					console.log('error', error);
-				});
-			}, function(error){
-				console.log('error', error);
-			});
-		}, function(error){
-			console.log('error', error);
-		});
-	}, function(error){
-		console.log('error', error);
-	});
+	document.body.style.backgroundColor = "green";
 }, function(error){
 	console.log('error', error);
+	document.body.style.backgroundColor = "red";
 });
 
-let a = () => {
-	
-}
+
+requestPromise(`google.com`).then(function(results){
+	console.log('success', results);
+}).catch(function(error){
+	// untuk penyambungan catch haru menggunakan titik
+	console.log('error', error);
+})
 // requestPromise('movie.com')
 // 	.then((result) => {
 // 		console.log('page 1');
